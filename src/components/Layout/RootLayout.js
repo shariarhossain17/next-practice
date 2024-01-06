@@ -32,7 +32,7 @@ const  RootLayout = ({children}) => {
           }}
         >
           <Button>
-            <Link href="/blog">blog</Link>
+            <Link href="/admin">admin</Link>
           </Button>
         </Menu>
       </Header>
@@ -46,8 +46,7 @@ const  RootLayout = ({children}) => {
             margin: '16px 0',
           }}
         >
-          <Breadcrumb.Item><Link href="/">Home</Link></Breadcrumb.Item>
-          <Breadcrumb.Item>{router.pathname ==="/"?"":router.pathname}</Breadcrumb.Item>
+          <Breadcrumb.Item>{router.pathname ==="/"?"home":router.pathname.split("/")}</Breadcrumb.Item>
         </Breadcrumb>
         <div
           style={{
