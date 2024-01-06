@@ -1,3 +1,4 @@
+import RootLayout from "../../../components/Layout/RootLayout";
 
 const AboutPage = () => {
     return (
@@ -8,3 +9,9 @@ const AboutPage = () => {
 };
 
 export default AboutPage;
+
+AboutPage.getLayout= function(page){
+    return (
+     <RootLayout>{page}</RootLayout>
+    )
+}
