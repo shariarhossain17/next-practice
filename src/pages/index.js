@@ -1,4 +1,5 @@
-import { Breadcrumb, Layout, Menu, theme } from 'antd';
+import { Breadcrumb, Button, Layout, Menu, theme } from 'antd';
+import Link from 'next/link';
 const { Header, Content, Footer } = Layout;
 const items = new Array(15).fill(null).map((_, index) => ({
   key: index + 1,
@@ -8,6 +9,7 @@ const HomePage = () => {
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
+
   return (
     <Layout>
       <Header
@@ -21,12 +23,15 @@ const HomePage = () => {
           theme="dark"
           mode="horizontal"
           defaultSelectedKeys={['2']}
-          items={items}
           style={{
             flex: 1,
             minWidth: 0,
           }}
-        />
+        >
+          <Button>
+            <Link href="/blog">blog</Link>
+          </Button>
+        </Menu>
       </Header>
       <Content
         style={{
