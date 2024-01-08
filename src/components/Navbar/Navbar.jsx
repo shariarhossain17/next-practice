@@ -5,7 +5,7 @@ const Navbar = () => {
         <div>
             <nav className="flex justify-between items-center bg-black px-12 p-4">
                 <div>
-                    <h1 className="text-4xl font-semibold text-white bg-gray-500">New paper</h1>
+                    <h1 className="text-4xl font-semibold text-white bg-gray-500 p-2 rounded-[5px] ">New paper</h1>
                 </div>
                 <div className="text-white">
                     <Link className="ml-8" href="/all-news">All News</Link>

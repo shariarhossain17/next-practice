@@ -1,13 +1,14 @@
 import RootLayout from "@/Layout/RootLayout";
+import Banner from "@/components/ Banner/Banner";
 
 const HomePage = () => {
 
 
   return (
-  <h1 className="text-red-700">
+  <>
 
-    
-  </h1>
+    <Banner/>
+  </>
   );
 };
 export default HomePage;
