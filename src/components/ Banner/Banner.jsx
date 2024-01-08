@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import eagle from "../../assests/0942.jpg_wh860.jpg";
+import eagle from "../../assets/0942.jpg_wh860.jpg";
 
 const Banner = () => {
     return (
