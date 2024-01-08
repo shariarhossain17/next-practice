@@ -1,8 +1,12 @@
+import Navbar from "@/components/Navbar/Navbar";
 
 const RootLayout = ({children}) => {
 
   return (
- <div>{children}</div>
+<div className="">
+ <Navbar/>
+  <div>{children}</div>
+</div>
   );
 };
 export default RootLayout;

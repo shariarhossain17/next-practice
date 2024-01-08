@@ -4,11 +4,10 @@ const HomePage = () => {
 
 
   return (
-    <div>
+  <h1 className="text-red-700">
+
     
-      
-      This is Home page
-      </div>
+  </h1>
   );
 };
 export default HomePage;
