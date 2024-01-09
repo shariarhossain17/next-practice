@@ -15,7 +15,10 @@ const LoginPage = () => {
          <button onClick={()=> signIn("github",{
           callbackUrl:"http://localhost:3000/"
          })}>Github</button>
-         <button>Google</button>
+         <button onClick={()=> signIn("google",{
+          callbackUrl:"http://localhost:3000/"
+         })}>Google</button>
+  
         </div>
         <hr />
         <form>
