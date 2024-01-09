@@ -1,11 +1,12 @@
 import RootLayout from "@/Layout/RootLayout";
+import NewsCard from "@/components/Allnews/NewsCard";
 
 const NewsDetails = ({singleNews}) => {
 // console.log(singleNews);
 
     return (
         <div>
-            <h1>{singleNews.title}</h1>
+          <NewsCard news={singleNews}></NewsCard>
         </div>
     );
 };
@@ -18,18 +19,18 @@ NewsDetails.getLayout = function getLayout (page) {
     return <RootLayout>{page}</RootLayout>
 }
 
-export const getStaticPaths = async () => {
-  const res = await fetch("http://localhost:5000/news");
-  const newses = await res.json();
+// export const getStaticPaths = async () => {
+//   const res = await fetch("http://localhost:5000/news");
+//   const newses = await res.json();
 
-  const paths = newses.map((news) => ({
-    params: { newsId: String(news?.id) },
-  }));
+//   const paths = newses.map((news) => ({
+//     params: { newsId: String(news?.id) },
+//   }));
 
 
-  return { paths, fallback: false };
-};
-export const getStaticProps = async (context) => {
+//   return { paths, fallback: false };
+// };
+export const getServerSideProps = async (context) => {
 
     const {params}=context
 
