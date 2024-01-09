@@ -1,3 +1,4 @@
+import Link from "next/link";
 
 const NewsCard = ({news}) => {
 
@@ -7,7 +8,9 @@ const NewsCard = ({news}) => {
            <h1 className="mb-4">{news.title}</h1>
            <p>{news.description}</p>
            <p>comment <span>{news.comment_count}</span></p>
-           <button className=" bg-black text-white p-4 rounded-md mt-4">keep reading</button>
+        <Link href={`/news/${news?.id}`}>
+        <button className=" bg-black text-white p-4 rounded-md mt-4">keep reading</button>
+        </Link>
         </div>
     );
 };
