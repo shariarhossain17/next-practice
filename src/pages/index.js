@@ -1,4 +1,3 @@
-import RootLayout from "@/Layout/RootLayout";
 import Banner from "@/components/ Banner/Banner";
 import NewsCard from "@/components/Allnews/NewsCard";
 
@@ -18,9 +17,9 @@ const HomePage = ({ allNews }) => {
 };
 export default HomePage;
 
-HomePage.getLayout = function getLayout(page) {
-  return <RootLayout>{page}</RootLayout>;
-};
+// HomePage.getLayout = function getLayout(page) {
+//   return <RootLayout>{page}</RootLayout>;
+// };
 
 export const getServerSideProps = async () => {
   const res = await fetch("http://localhost:5000/news");

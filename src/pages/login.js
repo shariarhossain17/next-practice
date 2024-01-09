@@ -1,5 +1,6 @@
 import styles from "@/styles/Login.module.css";
-import { GithubOutlined, GoogleOutlined } from "@ant-design/icons";
+import { signIn } from "next-auth/react";
+
 
 import Head from "next/head";
 const LoginPage = () => {
@@ -10,9 +11,11 @@ const LoginPage = () => {
       </Head>
       <div className={styles.form}>
         <h3>LOGIN</h3>
-        <div className={styles.social_icons}>
-          <GoogleOutlined />
-          <GithubOutlined />
+        <div className="flex text-[20px] ">
+         <button onClick={()=> signIn("github",{
+          callbackUrl:"http://localhost:3000/"
+         })}>Github</button>
+         <button>Google</button>
         </div>
         <hr />
         <form>
