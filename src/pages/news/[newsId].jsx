@@ -1,4 +1,3 @@
-import RootLayout from "@/Layout/RootLayout";
 import NewsCard from "@/components/Allnews/NewsCard";
 
 const NewsDetails = ({singleNews}) => {
@@ -14,10 +13,10 @@ const NewsDetails = ({singleNews}) => {
 export default NewsDetails;
 
 
-NewsDetails.getLayout = function getLayout (page) {
+// NewsDetails.getLayout = function getLayout (page) {
 
-    return <RootLayout>{page}</RootLayout>
-}
+//     return <RootLayout>{page}</RootLayout>
+// }
 
 // export const getStaticPaths = async () => {
 //   const res = await fetch("http://localhost:5000/news");
